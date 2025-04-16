@@ -6,6 +6,10 @@ fn main() {
     another_function2(5);
 
     print_labeled_measurement(5, 'S');
+
+    let x: i32 = sum_function(500, 200);
+
+    println!("{}", x);
 }
 
 fn another_function1() {
@@ -19,4 +23,8 @@ fn another_function2(x: i8) {
 
 fn print_labeled_measurement(value: i32, unit_label: char) {
     println!("The measurement is: {value}{unit_label}");
+}
+
+fn sum_function(x: i32, y: i32) -> i32 {
+    x + y
 }
