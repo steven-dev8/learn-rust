@@ -1,0 +1,6 @@
+[package]
+name = "cap4_4_string_literal_as_slice"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
