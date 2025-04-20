@@ -20,7 +20,7 @@ fn main() {
 
     let arr: [User; 2] = [user1, user2];
 
-    for user in &arr { //.iter() já retorna referências dos itens
+    for user in arr& { //.iter() já retorna referências dos itens
         match user.age {
             Some(age) => println!("{} têm {} anos", user.name, age),
             None => println!("{} não possui a idade cadastrada", user.name),
