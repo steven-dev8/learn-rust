@@ -1,0 +1,8 @@
+[package]
+name = "art_color_begin"
+version = "0.1.0"
+edition = "2024"
+description = "A crate for testing, as a conclusion to chapter 14 of the Rust book."
+license = "MIT OR Apache-2.0"
+
+[dependencies]
