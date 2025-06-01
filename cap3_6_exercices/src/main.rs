@@ -11,9 +11,11 @@ fn convert_temp() {
         println!("Input F to Fahrenheit or C to Celsius: ");
         let mut choose = String::new();
 
+        const ERROR: &str = "Error: could not read line.";
+
         io::stdin()
         .read_line(&mut choose)
-        .expect("Error: could not read line.");
+        .expect("{ERROR}");
         
         let choose = choose.trim();
         let mut number = String::new();

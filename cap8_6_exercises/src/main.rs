@@ -1,13 +1,9 @@
 use std::collections::HashMap;
 
 fn main() {
-    let array = [1, 2, 2, 4, 5, 6, 7, 8];
-
-    let mediana = median(&array);
-    println!("{mediana}");
-
-    let moda = mode(&array);
-    println!("{moda}")
+    let word = "hello apple first";
+    let word = latin_pig(&word);
+    println!("{word}")
 }
 
 fn median(arr: &[i32]) -> f64 {
@@ -38,4 +34,24 @@ fn mode(arr: &[i32]) -> i32 {
     }
 
     high
+}
+
+fn latin_pig(string: &str) -> String {
+    let mut phrase_latin = String::new();
+
+    for word in string.split_whitespace() {
+        let mut chars = word.chars();
+
+        if let Some(chr) = chars.next() {
+            if matches!(chr, 'a' | 'e' | 'i' | 'o' | 'u') {
+                phrase_latin.push_str(&format!("{word}-hay "));
+            } else {
+                // collect() consome o restante do iterador, transformando no type
+                let add: String = chars.collect();
+                phrase_latin.push_str(&format!("{add}-{chr}ay "))
+            }
+        }
+    }
+
+    phrase_latin.trim_end().to_string()
 }
