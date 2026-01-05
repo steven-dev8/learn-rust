@@ -75,6 +75,6 @@ fn show_employees_by_department(employee_db: &HashMap<String, Vec<String>>){
     if let Some(list_employess) = list_department {
         let mut employee_sorted = list_employess.clone();
         employee_sorted.sort();
-        println!("{employee_sorted:?}")
+        println!("{employee_sorted:? }")
     }
 }
